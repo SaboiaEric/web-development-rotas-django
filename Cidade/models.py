@@ -15,5 +15,5 @@ class Cidade(models.Model):
     pais = models.CharField(max_length=100)
     id_cidade = models.IntegerField(default=INITIAL_ID)
 
-def __str__(self):
-    return (self.nomeCidade)
+    def __str__(self):
+        return self.nomeCidade

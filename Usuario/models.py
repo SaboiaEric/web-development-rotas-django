@@ -20,5 +20,5 @@ class Usuario(models.Model):
     id_usuario = models.IntegerField(default=INITIAL_ID)
     cidades = models.ManyToManyField(Cidade)
 
-def __str__(self):
-    return (self.nome)
+    def __str__(self):
+        return (self.nome)
