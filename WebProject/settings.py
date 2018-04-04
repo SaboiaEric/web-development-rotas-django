@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Usuario',
     'Cidade',
+    'Rota',
+    'Ponto',
+    'Categoria'
 ]
 
 MIDDLEWARE = [
