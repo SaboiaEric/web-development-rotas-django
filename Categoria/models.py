@@ -13,7 +13,5 @@ class Categoria(models.Model):
     nomeCategoria = models.CharField(max_length=150)
     descricao = models.CharField(max_length=350)
 
-
-
     def __str__(self):
         return self.nomeCategoria
