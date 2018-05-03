@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ponto Works</title>
-</head>
-<body>
-    <p>Ponto Workingggggg </p>
-</body>
+<html>
+  <head>
+    <!-- This stylesheet contains specific styles for displaying the map
+         on this page. Replace it with your own styles as described in the
+         documentation:
+         https://developers.google.com/maps/documentation/javascript/tutorial -->
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #campo {
+        height: 25%;
+      }
+      #map {
+        height: 75%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="campo">
+        <p>Olá Marc :)</p>
+        <input id="searchPlace" placeholder="Digite teu destino aqui" onclick="return sendToMaps();"></input>
+
+    </div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -23.469644, lng: -47.429783},
+          zoom: 15
+        });
+      }
+
+      function sendToMaos(){
+        var place = $("#searchPlace").value
+        //Simple request to MAP's API to get autocomplete places using value write in input
+        //https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBev7uBoIoRMldf7RHDqUKneHQuqALpxqc&input=place
+      }
+    </script>
+    //Get location in Map's API using value wirte in input
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBev7uBoIoRMldf7RHDqUKneHQuqALpxqc&callback=initMap"
+    async defer></script>
+  </body>
 </html>
